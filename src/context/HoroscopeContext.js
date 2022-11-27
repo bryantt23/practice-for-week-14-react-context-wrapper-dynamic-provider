@@ -1,9 +1,16 @@
 import { createContext } from 'react';
+import horoscopesObj from '../data/horoscopes';
 
-const HoroscopeContext = createContext();
+export const HoroscopeContext = createContext();
+
 const HoroscopeProvider = props => {
+  const currentSign = { sign: 'Pisces' };
+  const sign = horoscopesObj[currentSign.sign];
+  console.log('🚀 ~ file: HoroscopeContext.js ~ line 7 ~ sign', sign);
   return (
-    <HoroscopeContext.Provider>{props.children}</HoroscopeContext.Provider>
+    <HoroscopeContext.Provider value={{ sign }}>
+      {props.children}
+    </HoroscopeContext.Provider>
   );
 };
 export default HoroscopeProvider;

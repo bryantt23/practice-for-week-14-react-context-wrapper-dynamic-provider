@@ -6,7 +6,7 @@ import HoroscopeProvider from './context/HoroscopeContext';
 
 const Root = () => {
   return (
-    <HoroscopeProvider value={{ sign: 'Leo' }}>
+    <HoroscopeProvider>
       <App />
     </HoroscopeProvider>
   );
