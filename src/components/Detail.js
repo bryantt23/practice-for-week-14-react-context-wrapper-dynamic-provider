@@ -1,8 +1,8 @@
 import { useContext } from 'react';
-import { HoroscopeContext } from '../context/HoroscopeContext';
+import HoroscopeProvider from '../context/HoroscopeContext';
 
 const Detail = () => {
-  const horoscopesObj = useContext(HoroscopeContext);
+  const horoscopesObj = useContext(HoroscopeProvider);
 
   return (
     <div className='details'>
